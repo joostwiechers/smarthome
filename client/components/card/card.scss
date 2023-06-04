@@ -1,0 +1,14 @@
+.card {
+  background: #444444;
+  color: white;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  width: 360px;
+  display: inline-block;
+
+  &__subtitle {
+    font-size: 36px;
+    margin-top: 24px;
+  }
+}
