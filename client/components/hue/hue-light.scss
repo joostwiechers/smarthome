@@ -1,11 +1,10 @@
 .hue-light {
   height: auto;
-  border-radius: 12px;
-  background-color: #444444;
-  color: white;
+  border-radius: var(--border-radius);
+  background-color: var(--card-color);
+  color: var(--main-text-color);
   padding: 16px;
   width: 256px;
-  cursor: pointer;
   opacity: 0.2;
 
   transition-property: opacity;
@@ -14,6 +13,7 @@
 
   &__name {
     padding-bottom: 24px;
+    cursor: pointer;
   }
 
   &__options {
@@ -52,7 +52,9 @@
 
   &__colors {
     display: flex;
-    gap: 12px;
+    gap: 16px;
+    justify-content: center;
+    cursor: pointer;
   }
 
   &__color {
@@ -61,12 +63,20 @@
     background-color: white;
     border-radius: 16px;
     display: inline-block;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: ease-out;
   }
 
   &--active {
     opacity: 1;
 
-    > .hue-light__options {
+    .hue-light__color {
+      opacity: 1;
+    }
+
+    .hue-light__options {
       pointer-events: initial;
     }
   }

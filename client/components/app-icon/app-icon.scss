@@ -6,9 +6,9 @@
   &__image {
     display: block;
     background: white;
-    width: 64px;
+    width: 96px;
     aspect-ratio: 1/1;
-    border-radius: 16px;
+    border-radius: var(--border-radius);
   }
 
   &__title {

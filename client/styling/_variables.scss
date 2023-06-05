@@ -1,0 +1,16 @@
+:root {
+  --main-bg-color: #141414;
+  --main-text-color: #f5f5f7;
+  --primary-color: #ff6000;
+  --secondary-color: #ffa559;
+
+  --card-color: #444444;
+
+  --border-radius: 16px;
+}
+
+// Dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}

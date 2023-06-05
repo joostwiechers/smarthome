@@ -1,7 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit'
+
 import smarthomeReducer from './slices/smarthomeSlice'
 import hueReducer from './slices/hueSlice'
 import homewizardReducer from './slices/homewizardSlice'
+
 import {homewizardApi} from './apis/homewizardApi'
 import {hueApi} from './apis/hueApi'
 

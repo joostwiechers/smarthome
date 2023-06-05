@@ -1,14 +1,14 @@
 .card {
   background: #444444;
   color: white;
-  border-radius: 12px;
+  border-radius: var(--border-radius);
   padding: 16px;
   text-align: center;
-  width: 360px;
+  width: 256px;
   display: inline-block;
 
   &__subtitle {
-    font-size: 36px;
+    font-size: 40px;
     margin-top: 24px;
   }
 }

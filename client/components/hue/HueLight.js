@@ -63,7 +63,7 @@ const HueLight = ({id}) => {
                        min={0} max={254}
                        defaultValue={light.state.bri}
                        onChange={event => updateLightState({
-                           bri: event.target.value,
+                           bri: parseInt(event.target.value),
                            on: event.target.value > 0
                        })} />
 
