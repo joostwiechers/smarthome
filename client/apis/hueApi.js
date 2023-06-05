@@ -19,7 +19,7 @@ export const hueApi = createApi({
                 }
             })
         }),
-        setLightBrightness: builder.mutation({
+        updateLightState: builder.mutation({
             query: ({id, data}) => ({
                 url: `hue/${id}/update`,
                 method: 'PUT',
@@ -35,5 +35,5 @@ export const hueApi = createApi({
 export const {
     useGetLightsQuery,
     useToggleLightMutation,
-    useSetLightBrightnessMutation,
+    useUpdateLightStateMutation,
 } = hueApi

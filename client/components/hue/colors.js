@@ -1,3 +1,7 @@
+/**
+ * All available colors to click in the app.
+ * @type {[{settings: {sat: number, hue: number}, hex: string, title: string},{settings: {sat: number, hue: number}, hex: string, title: string},{settings: {sat: number, hue: number}, hex: string, title: string},{settings: {sat: number, hue: number}, hex: string, title: string},{settings: {sat: number, hue: number}, hex: string, title: string}]}
+ */
 const colors = [
     {
         title: 'White',

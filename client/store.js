@@ -5,6 +5,9 @@ import homewizardReducer from './slices/homewizardSlice'
 import {homewizardApi} from './apis/homewizardApi'
 import {hueApi} from './apis/hueApi'
 
+/**
+ * The app's store.
+ */
 export const store = configureStore({
     reducer: {
         smartHome: smarthomeReducer,

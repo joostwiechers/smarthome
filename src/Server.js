@@ -5,7 +5,7 @@ const hueController = require('./controller/hueController')
 const homewizardController = require('./controller/homewizardController')
 
 /**
- * Handles all webserver logic.
+ * Handles all web server logic.
  */
 class Server {
     constructor(config) {
@@ -38,7 +38,6 @@ class Server {
             .get((req, res) => hueController.list(res))
 
         this.app.route('/api/hue/:id/toggle').put((req, res) => hueController.toggle(req, res))
-
         this.app.route('/api/hue/:id/update').put((req, res) => hueController.update(req, res))
 
         // Open up all dist files.

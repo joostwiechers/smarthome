@@ -1,11 +1,16 @@
+import './app-view.scss'
+
 import React from 'react'
 import {useSelector} from 'react-redux'
-
-import './app-view.scss'
 
 import Hue from '../hue/Hue'
 import Homewizard from '../homewizard/Homewizard'
 
+/**
+ * The app view. The screen excluding the dock.
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const AppView = () => {
     const activeApp = useSelector((state) => state.smartHome.activeApp)
 

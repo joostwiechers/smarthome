@@ -1,9 +1,16 @@
+import './app-icon.scss'
+
 import React from 'react'
 
-import './app-icon.scss'
 import {useDispatch} from 'react-redux'
 import {setActiveApp} from '../../slices/smarthomeSlice'
 
+/**
+ * App icon that sets the active app on click.
+ * @param app
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const AppIcon = ({app}) => {
     const dispatch = useDispatch()
 

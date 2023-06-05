@@ -1,3 +1,7 @@
+/**
+ * Return a list of all available apps.
+ * @type {[{img: string, title: string},{img: string, title: string},{img: string, title: string}]}
+ */
 const apps = [
     {
         title: 'sonos',

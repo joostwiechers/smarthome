@@ -1,19 +1,16 @@
-import React from 'react'
-
 import './index.scss'
 
+import React from 'react'
 import {createRoot} from 'react-dom/client'
-import {BrowserRouter} from 'react-router-dom'
-import Smarthome from './components/smarthome/Smarthome'
 import {Provider} from 'react-redux'
+
+import Smarthome from './components/smarthome/Smarthome'
 import {store} from './store'
 
 const root = createRoot(document.getElementById('app'))
 
 root.render(
     <Provider store={store}>
-        <BrowserRouter>
-            <Smarthome />
-        </BrowserRouter>
+        <Smarthome />
     </Provider>
 )

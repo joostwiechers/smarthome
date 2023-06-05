@@ -1,7 +1,14 @@
-import React from 'react'
-
 import './card.scss'
 
+import React from 'react'
+
+/**
+ * A generic card with a title and a subtitle.
+ * @param title
+ * @param subtitle
+ * @returns {JSX.Element}
+ * @constructor
+ */
 const Card = ({title = '', subtitle = ''}) => {
 
     return (
