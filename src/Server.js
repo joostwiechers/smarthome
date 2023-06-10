@@ -2,12 +2,17 @@ const path = require('path')
 const express = require('express')
 
 const hueController = require('./controller/hueController')
-const homewizardController = require('./controller/homewizardController')
+const homeWizardController = require('./controller/homeWizardController')
+const sonosController = require('./controller/sonosController')
 
 /**
  * Handles all web server logic.
  */
 class Server {
+    /**
+     * Server constructor.
+     * @param config - The config object in the root of the project.
+     */
     constructor(config) {
         this.config = config.server
         this.app = express()
@@ -29,16 +34,25 @@ class Server {
     registerRoutes() {
         this.app.route('/').get((req, res) => res.sendFile(path.resolve('public/index.html')))
 
-        // Homewizard API routes.
-        this.app.route('/api/homewizard')
-            .get((req, res) => homewizardController.latest(res))
+        /**
+         * HomeWizard API routes.
+         */
+        this.app.route('/api/home-wizard')
+            .get((req, res) => homeWizardController.latest(res))
 
-        // Hue API routes
+        /**
+         * Hue API routes.
+         */
         this.app.route('/api/hue')
             .get((req, res) => hueController.list(res))
 
         this.app.route('/api/hue/:id/toggle').put((req, res) => hueController.toggle(req, res))
         this.app.route('/api/hue/:id/update').put((req, res) => hueController.update(req, res))
+
+        /**
+         * Sonos API routes.
+         */
+        this.app.route('/api/sonos').get((req, res) => sonosController.test(req, res))
 
         // Open up all dist files.
         this.app.use('/dist', express.static(path.resolve('dist/')))

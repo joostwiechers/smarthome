@@ -6,7 +6,7 @@ const config = {
         ip: '',
         username: '',
     },
-    homewizard: {
+    homeWizard: {
         ip: ''
     },
     sonos: {

@@ -12,7 +12,7 @@ const apps = [
         img: 'https://play-lh.googleusercontent.com/FUlW6h3cACamheiCHH1cE67irohAZq_dJ92irK92cryKwHUtY6ZTSv5d041qPZ9UOt3n'
     },
     {
-        title: 'homewizard',
+        title: 'home-wizard',
         img: 'https://www.homewizard.com/wp-content/uploads/2023/03/energy-plus-logo-product.webp'
     }
 ]

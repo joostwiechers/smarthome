@@ -1,18 +1,18 @@
-const homewizardApi = require('../api/homewizardApi')
+const homeWizardApi = require('../api/homeWizardApi')
 
 /**
  * Handles all HomeWizard requests.
  * @type {{latest: (function(*): Promise<*>)}}
  */
-const homewizardController = {
+const homeWizardController = {
     /**
      * Respond with the latest HomeWizard P1 meter data.
      * @param response
      */
     latest: response => {
-        homewizardApi.getLatest()
+        homeWizardApi.getLatest()
             .then(apiResponse => response.send(apiResponse.data))
     }
 }
 
-module.exports = homewizardController
+module.exports = homeWizardController

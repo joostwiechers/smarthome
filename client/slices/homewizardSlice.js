@@ -4,8 +4,8 @@ const initialState = {
     data: {},
 }
 
-const homewizardSlice = createSlice({
-    name: 'homewizard',
+const homeWizardSlice = createSlice({
+    name: 'homeWizard',
     initialState,
     reducers: {
         setData(state, action) {
@@ -14,5 +14,5 @@ const homewizardSlice = createSlice({
     }
 })
 
-export const { setData } = homewizardSlice.actions
-export default homewizardSlice.reducer
+export const { setData } = homeWizardSlice.actions
+export default homeWizardSlice.reducer

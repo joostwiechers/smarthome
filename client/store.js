@@ -2,9 +2,9 @@ import {configureStore} from '@reduxjs/toolkit'
 
 import smarthomeReducer from './slices/smarthomeSlice'
 import hueReducer from './slices/hueSlice'
-import homewizardReducer from './slices/homewizardSlice'
+import homeWizardReducer from './slices/homeWizardSlice'
 
-import {homewizardApi} from './apis/homewizardApi'
+import {homeWizardApi} from './apis/homeWizardApi'
 import {hueApi} from './apis/hueApi'
 
 /**
@@ -14,15 +14,15 @@ export const store = configureStore({
     reducer: {
         smartHome: smarthomeReducer,
         hue: hueReducer,
-        homewizard: homewizardReducer,
+        homeWizard: homeWizardReducer,
 
-        [homewizardApi.reducerPath]: homewizardApi.reducer,
+        [homeWizardApi.reducerPath]: homeWizardApi.reducer,
         [hueApi.reducerPath]: hueApi.reducer,
     },
 
     middleware: getDefaultMiddleware => {
         return getDefaultMiddleware()
-            .concat(homewizardApi.middleware)
+            .concat(homeWizardApi.middleware)
             .concat(hueApi.middleware)
     }
 })
