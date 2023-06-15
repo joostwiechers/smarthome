@@ -9,6 +9,10 @@
     width: 96px;
     aspect-ratio: 1/1;
     border-radius: var(--border-radius);
+
+    @media only screen and (max-width: 480px) {
+      width: 64px;
+    }
   }
 
   &__title {

@@ -5,4 +5,8 @@
   background: var(--main-bg-color);
   padding: 16px;
   height: 100vh;
+
+  &--hidden {
+    display: none;
+  }
 }
