@@ -4,7 +4,7 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 
 import Hue from '../hue/Hue'
-import HomeWizard from '../homeWizard/HomeWizard'
+import HomeWizard from '../home-wizard/HomeWizard'
 
 /**
  * The app view. The screen excluding the dock.
