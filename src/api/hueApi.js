@@ -5,12 +5,26 @@ const config = require('../../config')
  * @type {{light: (function(*): Promise<any>), update: (function(*, *): Promise<void | void>), toggle: (function(*, boolean=, {}=): Promise<void | void>), lights: (function(): Promise<any>)}}
  */
 const hueApi = {
+
+    defaultHeaders: {
+        'hue-application-key': config.hue.username
+    },
+
     /**
      * Fetch all the available lights.
      * @returns {Promise<any>}
      */
     lights: () => {
         return fetch(`${config.hue.ip}/api/${config.hue.username}/lights`)
+            .then(response => response.json())
+    },
+
+    /**
+     * Fetch all the available lights.
+     * @returns {Promise<any>}
+     */
+    groups: () => {
+        return fetch(`${config.hue.ip}/api/${config.hue.username}/groups`)
             .then(response => response.json())
     },
 

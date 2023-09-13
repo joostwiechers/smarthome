@@ -46,6 +46,9 @@ class Server {
         this.app.route('/api/hue')
             .get((req, res) => hueController.list(res))
 
+        this.app.route('/api/hue/groups')
+            .get((req, res) => hueController.groups(res))
+
         this.app.route('/api/hue/:id/toggle').put((req, res) => hueController.toggle(req, res))
         this.app.route('/api/hue/:id/update').put((req, res) => hueController.update(req, res))
 

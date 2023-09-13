@@ -4,7 +4,6 @@
   background-color: var(--card-color);
   color: var(--main-text-color);
   padding: 16px;
-  width: 256px;
   opacity: 0.2;
 
   transition-property: opacity;
@@ -12,7 +11,7 @@
   transition-timing-function: ease-out;
 
   &__name {
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
     cursor: pointer;
   }
 
@@ -74,6 +73,10 @@
 
     .hue-light__color {
       opacity: 1;
+    }
+
+    .hue-light__status {
+      filter: unset;
     }
 
     .hue-light__options {
