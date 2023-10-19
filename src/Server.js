@@ -21,7 +21,7 @@ class Server {
         this.app.use(express.json({limit: '50mb'}))
 
         // The port the web server will run on.
-        this.port = this.config.port || 2412
+        this.port = this.config?.port || 2412
 
         // Register the routes and start the server.
         this.registerRoutes()
