@@ -12,6 +12,15 @@ const colors = [
         hex: '#FFFFFF'
     },
     {
+        title: 'Warm',
+        settings: {
+            bri: 90,
+            hue: 9899,
+            sat: 151,
+        },
+        hex: 'orange'
+    },
+    {
         title: 'Red',
         settings: {
             hue: 0,
