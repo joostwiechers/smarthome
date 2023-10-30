@@ -6,6 +6,7 @@ import homeWizardReducer from './slices/homeWizardSlice'
 
 import {homeWizardApi} from './apis/homeWizardApi'
 import {hueApi} from './apis/hueApi'
+import {sonosApi} from "./apis/sonosApi"
 
 /**
  * The app's store.
@@ -18,11 +19,13 @@ export const store = configureStore({
 
         [homeWizardApi.reducerPath]: homeWizardApi.reducer,
         [hueApi.reducerPath]: hueApi.reducer,
+        [sonosApi.reducerPath]: sonosApi.reducer,
     },
 
     middleware: getDefaultMiddleware => {
         return getDefaultMiddleware()
             .concat(homeWizardApi.middleware)
             .concat(hueApi.middleware)
+            .concat(sonosApi.middleware)
     }
 })

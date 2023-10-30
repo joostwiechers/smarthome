@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    activeApp: 'hue'
+    activeApp: 'sonos'
 }
 
 const smarthomeSlice = createSlice({

@@ -2,13 +2,13 @@
   background: #444444;
   color: white;
   border-radius: var(--border-radius);
-  padding: 16px;
+  padding: 1rem;
   text-align: center;
   width: 256px;
   display: inline-block;
 
   &__subtitle {
-    font-size: 40px;
-    margin-top: 24px;
+    font-size: 2.5rem;
+    margin-top: 1.5rem;
   }
 }

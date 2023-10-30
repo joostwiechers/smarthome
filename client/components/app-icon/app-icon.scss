@@ -6,12 +6,12 @@
   &__image {
     display: block;
     background: white;
-    width: 96px;
+    width: 6rem;
     aspect-ratio: 1/1;
     border-radius: var(--border-radius);
 
     @media only screen and (max-width: 480px) {
-      width: 64px;
+      width: 4rem;
     }
   }
 

@@ -1,0 +1,32 @@
+.sonos {
+
+  .tracks {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    @media (min-width: 767px) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    @media(min-width: 992px) {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+  }
+
+  .track {
+    background: var(--card-color);
+    color: var(--main-text-color);
+    border-radius: var(--border-radius);
+    word-wrap: break-word;
+
+    &__content {
+      padding: 1rem;
+    }
+
+    img {
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+  }
+}

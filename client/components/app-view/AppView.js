@@ -5,6 +5,7 @@ import {useSelector} from 'react-redux'
 
 import Hue from '../hue/Hue'
 import HomeWizard from '../home-wizard/HomeWizard'
+import Sonos from "../sonos/Sonos";
 
 /**
  * The app view. The screen excluding the dock.
@@ -18,6 +19,7 @@ const AppView = () => {
         <main className="app-view">
             {activeApp === 'hue' && <Hue />}
             {activeApp === 'home-wizard' && <HomeWizard />}
+            {activeApp === 'sonos' && <Sonos />}
         </main>
     )
 }

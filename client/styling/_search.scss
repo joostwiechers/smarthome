@@ -1,0 +1,24 @@
+.search {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  &__input {
+    border: 0;
+    background: var(--card-color);
+    padding: 1rem;
+    height: 3rem;
+    color: var(--main-text-color);
+    border-radius: 1rem;
+    flex-grow: 1;
+  }
+
+  &__submit {
+    border-radius: 1rem;
+    background: var(--primary-color);
+    color: var(--main-text-color);
+    line-height: 3rem;
+    width: 3rem;
+    text-align: center;
+  }
+}

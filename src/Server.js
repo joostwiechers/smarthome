@@ -53,6 +53,8 @@ class Server {
          * Sonos API routes.
          */
         this.app.route('/api/sonos').get((req, res) => sonosController.test(req, res))
+        this.app.route('/api/sonos/search').get((req, res) => sonosController.search(req, res))
+        this.app.route('/api/sonos/play').get((req, res) => sonosController.play(req, res))
 
         // Open up all dist files.
         this.app.use('/dist', express.static(path.resolve('dist/')))
