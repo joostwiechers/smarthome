@@ -2,7 +2,6 @@ const hueApi = require('../api/hueApi')
 
 /**
  * Handles all Philips Hue requests.
- * @type {{update: hueController.update, toggle: hueController.toggle, list: hueController.list}}
  */
 const hueController = {
 
@@ -12,14 +11,17 @@ const hueController = {
      */
     list: response => {
         hueApi.lights().then(apiResponse => {
-            let lights = [];
-            Object.keys(apiResponse).forEach(key => {
-                lights.push({
-                    id: key,
-                    ...apiResponse[key]
-                })
-            })
-            response.send(lights)
+            response.send(hueController.mapResponse(apiResponse))
+        })
+    },
+
+    /**
+     * Return a list of all available groups.
+     * @param response
+     */
+    groups: response => {
+        hueApi.groups().then(apiResponse => {
+            response.send(hueController.mapResponse(apiResponse).filter(group => group.type === 'Room'))
         })
     },
 
@@ -41,6 +43,22 @@ const hueController = {
     update: (request, response) => {
         hueApi.update(request.params.id, request.body)
             .then(apiResponse => response.send(apiResponse))
+    },
+
+    mapResponse: response => {
+        if (!response) {
+            return []
+        }
+
+        let mapped = []
+        Object.keys(response).forEach(key => {
+            mapped.push({
+                id: key,
+                ...response[key]
+            })
+        })
+
+        return mapped
     }
 }
 

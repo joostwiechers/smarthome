@@ -10,6 +10,9 @@ export const hueApi = createApi({
         getLights: builder.query({
             query: () => `hue`
         }),
+        getGroups: builder.query({
+            query: () => `hue/groups`
+        }),
         toggleLight: builder.mutation({
             query: ({id, on}) => ({
                 url: `hue/${id}/toggle`,
@@ -27,13 +30,13 @@ export const hueApi = createApi({
                     ...data
                 }
             }),
-
         })
     })
 })
 
 export const {
     useGetLightsQuery,
+    useGetGroupsQuery,
     useToggleLightMutation,
     useUpdateLightStateMutation,
 } = hueApi

@@ -16,8 +16,8 @@ const HueLight = ({id}) => {
     // Fetch the light from the store.
     const light = useSelector(state => state.hue.lights.find(light => light.id === id))
 
-    // Set the active class if the light is on.
-    const active = light && light.state.on === true ? 'hue-light--active' : ''
+    // Set the activeClass class if the light is on.
+    const activeClass = light?.state.on === true ? 'hue-light--active' : ''
 
     // Toggle light API call trigger.
     const [toggleLightTrigger] = useToggleLightMutation()
@@ -51,7 +51,7 @@ const HueLight = ({id}) => {
     }
 
     return (
-        <div className={`hue-light ${active}`}>
+        <div className={`hue-light ${activeClass}`}>
             <div className="hue-light__name" onClick={toggleLight}>
                 {light.name}
             </div>
