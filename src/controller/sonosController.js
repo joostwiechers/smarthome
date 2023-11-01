@@ -11,7 +11,6 @@ const sonosController = {
 
     search: async (request, response) => {
         let data = await sonosApi.search(request.query.q, request.query.type, config)
-        console.log(data.tracks.items)
         response.send(
             data[request.query.type + 's']?.items
         )

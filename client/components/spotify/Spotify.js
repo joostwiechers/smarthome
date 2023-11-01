@@ -1,10 +1,9 @@
-import './sonos.scss'
+import './spotify.scss'
 
 import React, {useEffect, useState} from 'react'
 import {useGetTracksQuery, usePlayTrackQuery} from '../../apis/sonosApi'
-import {current} from "@reduxjs/toolkit";
 
-const Sonos = () => {
+const Spotify = () => {
 
     const [query, setQuery] = useState('')
     const [currentTrack, setCurrentTrack] = useState(null)
@@ -32,7 +31,7 @@ const Sonos = () => {
             <div className="search">
                 <input type="search" placeholder="Search..." className="search__input" onKeyUp={e => e.key === 'Enter' && setQuery(e.target.value)}/>
                 <div className="search__submit">
-                    S
+                    .
                 </div>
             </div>
 
@@ -53,4 +52,4 @@ const Sonos = () => {
     )
 }
 
-export default Sonos
+export default Spotify

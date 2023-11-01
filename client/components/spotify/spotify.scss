@@ -1,4 +1,4 @@
-.sonos {
+.spotify {
 
   .tracks {
     display: grid;
@@ -18,10 +18,13 @@
     background: var(--card-color);
     color: var(--main-text-color);
     border-radius: var(--border-radius);
-    word-wrap: break-word;
 
     &__content {
       padding: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: block;
     }
 
     img {

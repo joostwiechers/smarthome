@@ -4,8 +4,8 @@
  */
 const apps = [
     {
-        title: 'sonos',
-        img: 'https://play-lh.googleusercontent.com/ixBnWaJs0NdWI1w4rpAgiWlavHQZ2cMpatPoh3dwbj6ywnYIZ0g6me16prz-ABr7GA'
+        title: 'spotify',
+        img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/2048px-Spotify_App_Logo.svg.png'
     },
     {
         title: 'hue',

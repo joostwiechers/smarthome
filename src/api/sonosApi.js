@@ -31,7 +31,6 @@ const sonosApi = {
 
     search: async (q, type, config) => {
         let tokenData = await spotifyApi.getToken(config.spotify)
-
         const response = await fetch(`https://api.spotify.com/v1/search?offset=0&limit=20&q=${q}&type=${type}`, {
             headers: {
                 'Authorization': `Bearer ${tokenData.access_token}`,
